@@ -6,7 +6,10 @@ const productController = require('../controllers/productController');
 
 router
     .route('')
+    .get(productController.getAllProducts)
     .post(productController.createProduct)
+
+router.route('/static').get(productController.getAllProductStatic)
 
 
 
